@@ -4,7 +4,7 @@ metadata: # kpt-merge: /default
   name: default
   annotations:
     config.kubernetes.io/local-config: "true"
-    internal.kpt.dev/upstream-identifier: kpt.dev|Kptfile|default|default
+    internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|default'
 upstream:
   type: git
   git:
@@ -20,9 +20,3 @@ upstreamLock:
     commit: 238e8151e5837060c098b254f6adaff07cabc56e
 info:
   description: sample description
-status:
-  conditions:
-  - type: infra.nephio.org.ClusterScaleProfile.ngin.default.Injected
-    status: "False"
-    reason: ResourceNotFound
-    message: clusterscaleprofiles.infra.nephio.org "ngin" not found
