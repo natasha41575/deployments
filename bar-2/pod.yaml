@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata: # kpt-merge: /nginx
+  name: nginx
+  annotations:
+    config.kubernetes.io/local-config: "binding"
+    internal.kpt.dev/upstream-identifier: '|Pod|default|nginx'
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80

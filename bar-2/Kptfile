@@ -1,0 +1,22 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata: # kpt-merge: /bar-2
+  name: bar-2
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|bar-2'
+upstream:
+  type: git
+  git:
+    repo: https://github.com/natasha41575/blueprints.git
+    directory: foo
+    ref: foo/v1
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/natasha41575/blueprints.git
+    directory: foo
+    ref: foo/v1
+    commit: 8a0ec6f15899c89a15ad6342b47006edc223bfa9
+info:
+  description: sample description
