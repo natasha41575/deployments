@@ -10,13 +10,13 @@ upstream:
   git:
     repo: https://github.com/natasha41575/blueprints.git
     directory: foo
-    ref: foo/v2
+    ref: foo/v5
 upstreamLock:
   type: git
   git:
     repo: https://github.com/natasha41575/blueprints.git
     directory: foo
-    ref: foo/v2
-    commit: 238e8151e5837060c098b254f6adaff07cabc56e
+    ref: foo/v5
+    commit: 342e0575ec9b0cf2115db56277f581222b8bfe81
 info:
   description: sample description
