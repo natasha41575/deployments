@@ -1,0 +1,9 @@
+apiVersion: infra.nephio.org/v1alpha1
+kind: ClusterScaleProfile
+metadata: # kpt-merge: /nginx
+  name: nginx
+  annotations:
+    config.kubernetes.io/local-config: "binding"
+    internal.kpt.dev/upstream-identifier: 'infra.nephio.org|ClusterScaleProfile|default|nginx'
+spec:
+  autoscaling: false
