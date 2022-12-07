@@ -4,19 +4,19 @@ metadata: # kpt-merge: /bar
   name: bar
   annotations:
     config.kubernetes.io/local-config: "true"
-    internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|bar'
+    internal.kpt.dev/upstream-identifier: kpt.dev|Kptfile|default|bar
 upstream:
   type: git
   git:
     repo: https://github.com/natasha41575/blueprints.git
     directory: foo
-    ref: foo/v5
+    ref: foo/v3
 upstreamLock:
   type: git
   git:
     repo: https://github.com/natasha41575/blueprints.git
     directory: foo
-    ref: foo/v5
-    commit: 342e0575ec9b0cf2115db56277f581222b8bfe81
+    ref: foo/v3
+    commit: 67dcb92856b748e0c1c4b535dd23869af99d6681
 info:
   description: sample description
