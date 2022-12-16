@@ -14,12 +14,13 @@
 apiVersion: storage.cnrm.cloud.google.com/v1beta1
 kind: StorageBucket
 metadata: # kpt-merge: config-control/blueprints-project-bucket
-  name: blueprints-project-bucket # kpt-set: ${project-id}-${name}
+  name: blueprints-project-bucket2 # kpt-set: ${project-id}-${name}
   namespace: config-control
   annotations:
     cnrm.cloud.google.com/force-destroy: "false"
     cnrm.cloud.google.com/project-id: blueprints-project # kpt-set: ${project-id}
     internal.kpt.dev/upstream-identifier: 'storage.cnrm.cloud.google.com|StorageBucket|config-control|blueprints-project-bucket'
+    cnrm.cloud.google.com/blueprint: 'kpt-fn'
 spec:
   location: us-central1
   storageClass: standard # kpt-set: ${storage-class}
