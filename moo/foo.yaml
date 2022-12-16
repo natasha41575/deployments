@@ -1,1 +1,4 @@
 apiVerison: v1
+kind: bar
+metadata:
+  name: foo
